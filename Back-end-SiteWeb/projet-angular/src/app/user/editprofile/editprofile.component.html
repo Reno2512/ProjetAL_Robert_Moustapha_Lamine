@@ -1,0 +1,135 @@
+<h1 style="text-align:center">Mon profil</h1>
+<div class="container" >
+<br/>
+<br/>
+<br/>
+  <div class="row">
+    <div class="col-lg-2">
+      <a></a>
+    </div>
+    <div class="col-lg-3">
+      <a href="/annonce/id" class="btn btn-link btn-lg" role="button">Poster une annonce</a>
+    </div>
+    <div class="col-lg-3">
+      <a href="/profil" class="btn btn-link btn-lg" role="button">Accéder à mon profil</a>
+    </div>
+    <div class="col-lg-3">
+      <a href="" class="btn btn-link btn-lg" role="button">Page Principale</a>
+    </div>
+    <!-- <div class="col-lg-3">
+      <button class="btn btn-link btn-lg" type="submit">Tâches en cours</button>
+    </div> -->
+  </div>
+<br/>
+<br/>
+
+<div class="container" style="border: solid 1px; border-radius:25px; padding:20px; margin:20px">
+ 
+  <h3>Mes Informations</h3>
+  <br/>
+
+<div class="row" [formGroup]="form">
+<div class="col-lg-8">
+  <div class="row">
+    <div class="col-lg-4">
+      <label for="id">ID</label>
+      <input type="text" id="userId" class="form-control" formControlName="userId" />
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-lg-4">
+      <label for="pseudo">Pseudo</label>
+      <input type="text" id="pseudo" class="form-control" formControlName="pseudo"/>
+    </div>
+    
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-lg-4">
+      <label for="postalCodeUser">Code Postal</label>
+      <input type="text" id="postalCodeUser" class="form-control" formControlName="postalCodeUser"/>
+    </div>
+    
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-lg-4">
+      <label for="email">Email</label>
+      <input type="text" id="email" class="form-control" formControlName="email"/>
+    </div>
+    
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-lg-4">
+      <label for="phone">Téléphone</label>
+      <input type="text" id="telephone" class="form-control" formControlName="phone"/>
+    </div>
+    
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-lg-4">
+      <label for="phone">Description</label>
+      <input type="text" id="description" class="form-control" formControlName="description"/>
+    </div>
+    
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-lg-4">
+      <label for="password">Mot de passe</label>
+      <input type="password" id="password" class="form-control" formControlName="password"/>
+    </div>
+    
+  </div>
+  <br/>
+<label for="competences"><h3>Mes Compétences</h3></label>
+<div class="row">
+<div class="col-lg-6" style="text-align:left">
+  
+  <select class="form-control" id="competences" multiple="">
+    <option>Ménage</option>
+    <option>Conduite</option>
+    <option>Course</option>
+    <option>Couture</option>
+    <option>Cuisine</option>
+  </select>
+</div>
+<div class="col-lg-6">
+  <button class="btn btn-success" type="submit">Ajouter à mes compétences</button>
+</div>
+</div>
+<br/>
+  <h3>Mes Annonces</h3>
+  <div class="col-lg-6" style="border: solid 1px; border-radius:25px; padding:20px">
+    <div>
+    <a href="/annonce/profil" class="btn btn-link" type="submit">Annonce 1</a>
+  </div>
+  <div>
+    <a href="/annonce/profil" class="btn btn-link" type="submit">Annonce 2</a>
+  </div>
+  <div>
+    <a href="/annonce/profil" class="btn btn-link" type="submit">Annonce 3</a>
+  </div>
+    <a href="/annonce" class="btn btn-warning" role="button">Modifier mes annonces</a>
+  </div>
+<br/>
+<div class="row">
+  <div class="col-lg-7">
+    <p><p>
+  </div>
+  <div class="col-lg-3">
+  <button class="btn btn-success" type="button" (click)="updateUser()">Valider mes modifications</button>
+</div>
+</div>
+</div>
+</div>
+   
+</div>
+
+</div>
+<br/>
+<br/>
+<br/>

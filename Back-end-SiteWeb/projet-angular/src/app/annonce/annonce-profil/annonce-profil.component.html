@@ -1,0 +1,22 @@
+
+
+<div>
+    <label id="idLab">ID recherché</label>
+<input type="number" class = "form-control idIn"[(ngModel)]="id"/><input type ="submit" class = "btn btn-warning" id="rech" value="chercher cette annonce" (click)="find()"/></div>
+
+<div class="status" [ngStyle]="{'color': validation==='disponible'?'lightgreen':'red'}">
+    <p>{{validation}}</p>
+</div>
+<h1 class="heads" id="titre">{{annonce.title}}</h1>
+<h2 class="heads">Catégorie : {{annonce.category}}</h2><h2 class="heads">Lieu : {{annonce.postalCodeDemand}}</h2>
+
+<div class="description">
+<p>{{annonce.description}}</p>
+
+</div>
+
+
+<div class = "cont">
+<a class="btn btn-info" id="return" href="/annonce/all">Retour aux annonces</a>
+<button type="button" class="btn btn-success linkBtn" id="accept" (click)="accept()">Accepter l'annonce</button> 
+</div>

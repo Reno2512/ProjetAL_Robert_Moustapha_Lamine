@@ -1,0 +1,74 @@
+<br>
+<div class="row">
+    <div class="container">
+        <form [formGroup]="form">
+            <div class="card">
+                <div class="card-header">Inscription</div>
+                <div class="card-body">
+                    <div class="row">
+                        <!-- <div class="form-group col-md-6">
+                            <label for="id">ID</label>
+                            <input type="text" id="id" class="form-control" formControlName="id"/>
+                             Ajouter les validations 
+                        </div> -->
+                        <div class="form-group col-md-6">
+                            <label for="pseudo">Pseudo</label>
+                            <input type="text" id="pseudo" class="form-control" formControlName="pseudo"/>
+                            <div *ngIf="form.get('pseudo').invalid && form.get('pseudo').touched">
+                                <div *ngIf="form.get('pseudo').errors.required" style="color: #FF7851">Vous devez entrer un pseudo, il vous servira à vous identifier</div>
+                                <div *ngIf="form.get('pseudo').errors.minlength" style="color: #FF7851">Le pseudo doit contenire entre 5 et 20 caractères</div>
+                                <div *ngIf="form.get('pseudo').errors.maxlength" style="color: #FF7851">Le pseudo doit contenire entre 5 et 20 caractères</div>
+                            </div>
+                        <!-- Ajouter les validations -->
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" class="form-control" formControlName="email"/>
+                            <!-- Ajouter les validations -->
+                            <small id="emailHelp" class="form-text text-muted">Votre email ne sera révélé à d’autres utilisateurs que s’ils acceptent une de vos annonce.</small>
+                            <div *ngIf="form.get('email').invalid && form.get('email').touched">
+                                <div *ngIf="form.get('email').errors.required" style="color: #FF7851">Vous devez entrer votre email pour vous inscrire</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="password">Mot de Passe</label>
+                            <input type="password" id="password" class="form-control" formControlName="password"/>
+                            <div *ngIf="form.get('pseudo').invalid && form.get('pseudo').touched">
+                                <div *ngIf="form.get('password').errors.required" style="color: #FF7851">Vous devez entrer un mot de passe, il vous servira à vous identifier</div>
+                                <div *ngIf="form.get('password').errors.minlength" style="color: #FF7851">Le mot de passe doit contenire entre 5 et 20 caractères</div>
+                                <div *ngIf="form.get('password').errors.maxlength" style="color: #FF7851">Le mot de passe doit contenire entre 5 et 20 caractères</div>
+                            </div>
+                        <!-- Ajouter les validations -->
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="col-form-label col-form-label-lg" for="inputLarge">Code Postal</label>
+                            <input type="number" class="form-control" placeholder="59000" id="inputPostCode" formControlName="postalCodeUser">
+                            <div *ngIf="form.get('postalCodeUser').invalid && form.get('postalCodeUser').touched">
+                                <div *ngIf="form.get('postalCodeUser').errors.required" style="color: #FF7851">Vous devez entrer votre code postal pour vous inscrire</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="col-form-label col-form-label-lg" for="exampleSelect2">Compétences / Caractéristiques</label>
+                            <small id="CompetencesHelp" class="form-text text-muted">Sélectionnez les compétences qui vous correspondes</small>
+                            <select multiple="" class="form-control" id="exampleSelect2">
+                              <option>Jardinage</option>
+                              <option>Voiture</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <input type="submit" class="btn btn-success" value="save" [disabled]="!form.valid" (click)="addUser()" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+

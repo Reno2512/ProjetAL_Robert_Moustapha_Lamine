@@ -1,0 +1,99 @@
+<h1 style="text-align:center">Mon profil</h1>
+<div class="container" >
+<br/>
+<br/>
+<br/>
+  <div class="row" >
+    <div class="col-lg-2">
+      <a></a>
+    </div>
+    <div class="col-lg-3">
+      <a href="/annonce/id" class="btn btn-link btn-lg" role="button">Poster une annonce</a>
+    </div>
+    <div class="col-lg-3">
+      <a href="/editprofil" class="btn btn-link btn-lg" role="button">Modifier mon profil</a>
+    </div>
+    <div class="col-lg-3">
+      <a href="" class="btn btn-link btn-lg" role="button">Page Principale</a>
+    </div>
+    <!-- <div class="col-lg-3">
+      <button class="btn btn-link btn-lg" type="submit">Tâches en cours</button>
+    </div> -->
+  </div>
+<br/>
+<br/>
+<div>
+  <!-- <label id="idLab">ID recherché</label>
+<input type="number" class = "form-control idIn"[(ngModel)]="id"/>
+<input type ="submit" class = "btn btn-warning" id="rech" value="Chercher ce profil" (click)="find()"/>
+</div> -->
+<div class="container" style="border: solid 1px; border-radius:25px; padding:20px; margin:20px">
+
+  <h3>Mes Informations</h3>
+  <br/>
+<div class="row">
+<div class="col-lg-8">
+  <div class="row">
+    <div class="col-lg-4">
+      <p id="pseudo">Pseudo : {{user.pseudo}}</p>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-lg-4">
+      <p id=postalCodeUser>Coce Postal : {{user.postalCodeUser}}</p>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-lg-4">
+      <p id="email">Email : {{user.email}}</p>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-lg-4">
+      <p id="phone">Téléphone : {{user.phone}}</p>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-lg-4">
+      <p id="description">Description : {{user.description}}</p>
+    </div>
+  </div>
+  <br/>
+  
+  <br/>
+<div class="form-group" style="text-align:left">
+  <label for="competences"><h3>Mes Compétences</h3></label>
+  <ul>
+    <li>Ménage</li>
+    <li>Conduite</li>
+    <li>Course</li>
+    <li>Cuisine</li>
+
+
+  </ul>
+</div>
+<br/>
+  <h3>Mes Annonces</h3>
+  <div class="col-lg-6" style="border: solid 1px; border-radius:25px; padding:20px">
+    <div>
+      <a href="/annonce/profil" class="btn btn-link" type="submit">Annonce 1</a>
+  </div>
+  <div>
+    <a href="/annonce/profil" class="btn btn-link" type="submit">Annonce 2</a>
+  </div>
+  <div>
+    <a href="/annonce/profil" class="btn btn-link" type="submit">Annonce 3</a>
+<br/>
+</div>
+</div>
+   
+</div>
+
+</div>
+<br/>
+<br/>
+<br/>

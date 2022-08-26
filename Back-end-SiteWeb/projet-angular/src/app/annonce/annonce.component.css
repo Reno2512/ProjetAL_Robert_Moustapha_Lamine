@@ -1,0 +1,45 @@
+
+.status{
+    display:block;
+    border-color: #e6b3ff;
+    border-style: solid;
+    border-width:1px;
+    margin-left:30%;
+    margin-right:30%;
+    text-align: center;
+    font-size:28px;
+    margin-bottom : 5px;
+}
+.title{
+    font-size:24px;
+    color:black;
+    background-color: gainsboro;
+    border-style:solid;
+    border-width: 1px;
+    border-color:gray;
+    text-align:center;
+    margin-left: 20%;
+    margin-right:20%;
+}
+.userName{
+    font-size:20px;
+    color:mediumseagreen;
+    margin-left: 35%;
+    margin-right: 35%;
+    text-align:center;
+
+}
+.description{
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: justify;
+}
+#accept{
+    
+    background-color: green;
+}
+.coord{
+    text-align:center;
+    color:black;
+    margin-bottom: 50px;
+}

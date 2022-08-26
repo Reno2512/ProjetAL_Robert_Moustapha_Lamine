@@ -1,0 +1,86 @@
+<!-------------- navbar -------------------------->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Entr'aide</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/home">Accueil</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Participer</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/annonce/all">Voir les demandes</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/annonce/id">Poster une demande</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Communauté</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/other/team">L'équipe du projet</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/other/community">La communauté</a>
+                </div>
+            </li>
+            <!-- dashboard admin
+            <li class="nav-item active" *ngIf="hasAnyRole(['ADMIN'])">
+                <a class="nav-link" routerLink="/admin">Dashboard</a>
+            </li>
+            -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profil</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <!-- ajouter condition si connecté -->
+                    <a routerLink="/profil" class="dropdown-item">Mon profil</a>
+                    <div class="dropdown-divider"></div>
+                    <a routerLink="/editprofil" class="dropdown-item">Mettre à jour</a>
+                    <div class="dropdown-divider"></div>
+                    <a routerLink="/login" class="dropdown-item" (click)="logout()">Déconnexion</a>
+
+                    <!-- ajouter condition si pas connecté -->
+                    <div class="dropdown-divider"></div>
+                    <a routerLink="/login" class="dropdown-item">Connexion</a>
+                </div>
+
+            </li>
+
+
+        </ul>
+        <span class="navbar-text">
+
+      <!-- déconnexion -->
+
+    </span>
+    </div>
+</nav>
+<!-------------- navbar -------------------------->
+
+<!-------------- Footer -------------------------->
+
+<footer class="page-footer font-small footer-bg pt-4">
+    <!-- Footer Elements -->
+    <div class="container">
+        <ul class="list-unstyled list-inline text-center py-2">
+            <li class="list-inline-item">
+                <h5 class="mb-1 txt-index">Rejoignez-nous !</h5>
+            </li>
+            <li class="list-inline-item">
+                <a href="/signin" class="btn btn-outline-warning btn-rounded" >Inscription</a>
+            </li>
+        </ul>
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 text-footer">© 2022 Copyright: Robert - Moustapha - Lamine
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+<router-outlet></router-outlet>

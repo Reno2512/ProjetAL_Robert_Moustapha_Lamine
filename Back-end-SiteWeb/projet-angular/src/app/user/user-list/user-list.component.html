@@ -1,0 +1,33 @@
+<br>
+<div class="row" *ngIf="usersList.length>0">
+    <div class="container">
+      <div class="card">
+        <div class="card-header">Liste des utilisateurs</div>
+        <div class="card-body">
+          <table class="table">
+            <thead class="thead-light">
+              <th>Id</th>
+              <th>Pseudo</th>
+              <th>Email</th>
+              <th>Description</th>
+              <th>Code Postal</th>
+              <th>Téléphone</th>
+              <th>Admin</th>
+            </thead>
+            <tr *ngFor="let u of usersList;let i=index"> <!--stock l'index de chq element permet delete en fct index (i)-->
+              <td>{{u.id}}</td>
+              <td>{{u.pseudo}}</td>
+              <td>{{u.email}}</td>
+              <td>{{u.description}}</td>
+              <td>{{u.postalCodeUser}}</td>
+              <td>{{u.phone}}</td>
+              <td>{{u.isAdmin}}</td>
+              <td><input type="submit" value="Edit" class="btn btn-warning" (click)="edit(i)"></td>
+              <td><input type="submit" value="Delete" class="btn btn-danger" (click)="delete(i)"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>looool</p>
